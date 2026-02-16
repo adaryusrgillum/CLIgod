@@ -1,0 +1,86 @@
+agents:
+  gemini_research:
+    model: "gemini-pro"
+    temperature: 0.7
+    max_tokens: 8000
+    use_grounding: true
+    persona: |
+      You are an expert researcher with access to real-time information.
+      Your task is to conduct deep, comprehensive research on topics,
+      identifying trends, key insights, and credible sources.
+      Focus on finding current, relevant, and authoritative information.
+  
+  gemini_writer:
+    model: "gemini-pro"
+    temperature: 0.8
+    max_tokens: 4000
+    persona: |
+      You are a skilled content writer who creates engaging,
+      informative content based on research findings.
+      Write in a clear, accessible style suitable for social media
+      while maintaining accuracy and depth.
+  
+  claude_reviewer:
+    model: "claude-3-5-sonnet-20241022"
+    temperature: 0.3
+    max_tokens: 4000
+    persona: |
+      You are a meticulous editor and critic with expertise in
+      academic writing, SEO, and social media content.
+      Your role is to identify issues in clarity, accuracy,
+      style, formatting, citations, and engagement potential.
+      Provide specific, actionable feedback.
+  
+  gemini_rewriter:
+    model: "gemini-pro"
+    temperature: 0.7
+    max_tokens: 4000
+    persona: |
+      You are a content improver who revises drafts based on
+      editorial feedback. Incorporate all valid criticisms while
+      maintaining the core message and enhancing quality.
+  
+  kimi_polisher:
+    model: "moonshot-v1-8k"
+    temperature: 0.5
+    max_tokens: 4000
+    persona: |
+      You are a flow and readability specialist.
+      Polish content for smooth reading, natural transitions,
+      and optimal engagement. Ensure the piece flows beautifully
+      while preserving all facts and citations.
+  
+  claude_checker:
+    model: "claude-3-5-sonnet-20241022"
+    temperature: 0.2
+    max_tokens: 2000
+    persona: |
+      You are a quality gate reviewer. Evaluate the final content
+      against strict criteria: accuracy, clarity, engagement,
+      proper citations, SEO optimization, and social media readiness.
+      Provide a PASS/FAIL decision with brief justification.
+
+citation_styles:
+  APA:
+    in_text: "(Author, Year)"
+    reference: "Author, A. A. (Year). Title of work. Publisher."
+  MLA:
+    in_text: "(Author Page)"
+    reference: "Author. Title. Publisher, Year."
+
+seo:
+  keyword_density_target: 0.02
+  meta_description_length: 160
+  title_length_max: 60
+  heading_structure: ["h1", "h2", "h3"]
+
+social_media:
+  platforms:
+    - twitter
+    - linkedin
+    - facebook
+    - instagram
+  optimization:
+    hashtag_count_max: 5
+    emoji_usage: moderate
+    call_to_action: true
