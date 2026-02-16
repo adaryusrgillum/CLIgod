@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Small Business AI Revolution Series - Digital Catalog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="catalog-header">
+        <div class="container">
+            <h1>📚 The Small Business AI Revolution Series</h1>
+            <p class="subtitle">40 Books to Transform Your Business with AI</p>
+            
+            <div class="search-filter">
+                <input type="text" id="searchInput" placeholder="Search books..." class="search-box">
+                <select id="categoryFilter" class="filter-select">
+                    <option value="all">All Categories</option>
+                    <option value="foundation">Foundation Level</option>
+                    <option value="strategy">Strategy & Planning</option>
+                    <option value="operations">Operations & Automation</option>
+                    <option value="marketing">Marketing & Sales</option>
+                    <option value="customer">Customer Experience</option>
+                    <option value="finance">Finance & Decision Making</option>
+                    <option value="industry">Industry-Specific</option>
+                    <option value="advanced">Advanced Implementation</option>
+                    <option value="ethics">Ethics & Security</option>
+                    <option value="case-studies">Case Studies</option>
+                    <option value="quick-start">Quick-Start</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="catalog-main">
+        <div class="container">
+            <div class="book-grid" id="bookGrid">
+                <!-- Books will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Book Reader Modal -->
+    <div id="bookReader" class="book-reader-modal hidden">
+        <div class="reader-controls">
+            <button id="closeReader" class="control-btn">✕ Close</button>
+            <button id="prevPage" class="control-btn">← Previous</button>
+            <span id="pageIndicator" class="page-indicator">Page 1</span>
+            <button id="nextPage" class="control-btn">Next →</button>
+            <button id="fullscreenBtn" class="control-btn">⛶ Fullscreen</button>
+        </div>
+        
+        <div class="book-container">
+            <div id="flipbook" class="flipbook">
+                <!-- Pages will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="catalog-footer">
+        <div class="container">
+            <p>&copy; 2024 The Small Business AI Revolution Series | Digital Catalog</p>
+        </div>
+    </footer>
+
+    <script src="book-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
